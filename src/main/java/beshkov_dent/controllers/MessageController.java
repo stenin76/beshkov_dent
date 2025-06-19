@@ -31,7 +31,7 @@ public class MessageController {
         }
         List<Message> allMessages = this.messageRepo.findAll();
         model.addAttribute("allMessages", allMessages);
-        return "/message-panel";
+        return "message-panel";
     }
 
     @GetMapping("/message/delete/{id}")
