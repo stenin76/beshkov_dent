@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: "jdbc:mysql://beshkov-server.mysql.database.azure.com:3306/beshkov-database?serverTimezone=UTC&sslmode=required&user=vocotnibyk&password=kl1$$txPD7Mrb0Kp"
+    url: "jdbc:mysql://beshkov-server.mysql.database.azure.com:3306/beshkov-database?serverTimezone=UTC&sslmode=required&user=aywxxtvlda&password=05YmZYwoE$BE$k7L"
     hikari:
       maximum-pool-size: 10
       minimum-idle: 5
