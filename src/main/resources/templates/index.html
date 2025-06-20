@@ -15,9 +15,9 @@
     <meta property="og:site_name" content=""/>
     <meta property="og:description" content=""/>
     <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -282,49 +282,52 @@
             <div class="row">
                 <div class="col-md-4 video-hover-wrapper">
                     <div class="fh5co-event to-animate-2">
+                        <h3>Ортопантомография</h3>
                         <div class="image-wrapper">
-                            <h3>Ортопантомография</h3>
-                            <span class="fh5co-event-meta">
-									<img src="images/rengen_1.jpg" class="img-responsive tree-image" alt="">
-								</span>
-                            <video class="hover-video" muted loop playsinline>
+                            <img src="images/rengen_1.jpg" class="img-responsive tree-image" alt="">
+                            <button class="play-button" type="button">&#9658;</button>
+                            <button class="close-button" type="button">&times;</button>
+                            <video class="hover-video" muted playsinline>
                                 <source src="videos/video-1.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="text-content">
+                            <span class="fh5co-event-meta"></span>
                             <p>Показва общ изглед на съзъбието, челюстите, максиларните синуси и темпоромандибуларните стави.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 video-hover-wrapper">
                     <div class="fh5co-event to-animate-2">
+                        <h3>Секторна ортопантомография</h3>
                         <div class="image-wrapper">
-                            <h3>Ортопантомография</h3>
-                            <span class="fh5co-event-meta">
-									<img src="images/rengen_2.jpg" class="img-responsive tree-image" alt="">
-								</span>
-                            <video class="hover-video" muted loop playsinline>
+                            <img src="images/rengen_2.jpg" class="img-responsive tree-image" alt="">
+                            <button class="play-button" type="button">&#9658;</button>
+                            <button class="close-button" type="button">&times;</button>
+                            <video class="hover-video" muted playsinline>
                                 <source src="videos/video-2.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="text-content">
-                            <p>Показва общ изглед на съзъбието, челюстите, максиларните синуси и темпоромандибуларните стави.</p>
+                            <span class="fh5co-event-meta"></span>
+                            <p>Възможност за отразяване с екстраорален достъп на избран квадрант Изключителна възможност за ретгенов образ на мъдреци.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 video-hover-wrapper">
                     <div class="fh5co-event to-animate-2">
+                        <h3>Дигитална сегментна рентгенография</h3>
                         <div class="image-wrapper">
-                            <h3>Ортопантомография</h3>
-                            <span class="fh5co-event-meta">
-									<img src="images/rengen_3.jpg" class="img-responsive tree-image" alt="">
-								</span>
-                            <video class="hover-video" muted loop playsinline>
+                            <img src="images/rengen_3.jpg" class="img-responsive tree-image" alt="">
+                            <button class="play-button" type="button">&#9658;</button>
+                            <button class="close-button" type="button">&times;</button>
+                            <video class="hover-video" muted playsinline>
                                 <source src="videos/video-3d.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="text-content">
-                            <p>Показва общ изглед на съзъбието, челюстите, максиларните синуси и темпоромандибуларните стави.</p>
+                            <span class="fh5co-event-meta"></span>
+                            <p>Дигитална Сегментна Рентгенография (дигитално копие се съхранява в профила на пациента и е достъпно онлайн). Сегментните рентгенографии на зъбите показват целия зъб – от коронката до края на корена, а също и коста около него.</p>
                         </div>
                     </div>
                 </div>
@@ -389,6 +392,9 @@
                         </li>
                         <li>
                             <i class="icon-envelope"></i>mail@mail.com
+                        </li>
+                        <li>
+                            <i class="icon-location-pin"></i>виж на картата
                         </li>
                         <li>
                             <i class="icon-facebook"></i> <a href="https://www.facebook.com/Beshkovdent/" target="_blank">https://www.facebook.com/Beshkovdent/</a></li>
@@ -534,15 +540,40 @@
 	</script>
 
 <script>
-    document.querySelectorAll('.image-wrapper').forEach(wrapper => {
+    document.querySelectorAll('.video-hover-wrapper').forEach(wrapper => {
+      const playButton = wrapper.querySelector('.play-button');
+      const closeButton = wrapper.querySelector('.close-button');
       const video = wrapper.querySelector('.hover-video');
-      wrapper.addEventListener('mouseenter', () => {
+      const img = wrapper.querySelector('img');
+      const text = wrapper.querySelector('.text-content');
+      const heading = wrapper.querySelector('h3');
+
+      const showVideo = () => {
+        img.style.display = 'none';
+        text.style.display = 'none';
+        heading.style.display = 'none';
+        playButton.style.display = 'none';
+        closeButton.style.display = 'block';
+        video.style.display = 'block';
         video.play();
-      });
-      wrapper.addEventListener('mouseleave', () => {
+      };
+
+      const closeVideo = () => {
         video.pause();
         video.currentTime = 0;
-      });
+        video.style.display = 'none';
+        closeButton.style.display = 'none';
+        img.style.display = 'block';
+        text.style.display = 'block';
+        heading.style.display = 'block';
+        playButton.style.display = 'block';
+      };
+
+      playButton.addEventListener('click', showVideo);
+      closeButton.addEventListener('click', closeVideo);
+
+      // 🔁 Auto-close when video ends (remove loop if you want this to happen)
+      video.addEventListener('ended', closeVideo);
     });
 </script>
 

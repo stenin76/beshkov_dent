@@ -48,6 +48,6 @@ public class HomeController {
         redirectAttributes
                 .addFlashAttribute("successful_message", messageAddDto);
 
-        return "redirect:/#fh5co-contact";
+        return "redirect:/#reservation-form";
     }
 }
