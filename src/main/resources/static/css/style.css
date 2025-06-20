@@ -1295,6 +1295,12 @@ p {
     font-size: 11px;
     padding: 3px 5px;
   }
+  .gallery-3D {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+  }
 }
 
 /* POP-UP */
