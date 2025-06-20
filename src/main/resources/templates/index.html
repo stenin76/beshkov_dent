@@ -520,6 +520,7 @@
 <script src="/js/gallery.js"></script>
 <script src="/js/jquery.elastislide.js"></script>
 <script src="/js/jquery.tmpl.min.js"></script>
+<script src="js/rengen-video-play.js"></script>
 
 <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
 			<div class="rg-image-wrapper">
@@ -538,44 +539,6 @@
 				</div>
 			</div>
 	</script>
-
-<script>
-    document.querySelectorAll('.video-hover-wrapper').forEach(wrapper => {
-      const playButton = wrapper.querySelector('.play-button');
-      const closeButton = wrapper.querySelector('.close-button');
-      const video = wrapper.querySelector('.hover-video');
-      const img = wrapper.querySelector('img');
-      const text = wrapper.querySelector('.text-content');
-      const heading = wrapper.querySelector('h3');
-
-      const showVideo = () => {
-        img.style.display = 'none';
-        text.style.display = 'none';
-        heading.style.display = 'none';
-        playButton.style.display = 'none';
-        closeButton.style.display = 'block';
-        video.style.display = 'block';
-        video.play();
-      };
-
-      const closeVideo = () => {
-        video.pause();
-        video.currentTime = 0;
-        video.style.display = 'none';
-        closeButton.style.display = 'none';
-        img.style.display = 'block';
-        text.style.display = 'block';
-        heading.style.display = 'block';
-        playButton.style.display = 'block';
-      };
-
-      playButton.addEventListener('click', showVideo);
-      closeButton.addEventListener('click', closeVideo);
-
-      // 🔁 Auto-close when video ends (remove loop if you want this to happen)
-      video.addEventListener('ended', closeVideo);
-    });
-</script>
 
 <div id="modal1" class="modalOverlay hidden">
     <div class="modalContent" tabindex="0">
