@@ -1630,24 +1630,55 @@ p {
 }
 
 .play-button {
-   position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: white;
+    width: 15vw;
+    height: 15vw;
     background: rgba(0, 0, 0, 0.6);
     border: none;
     border-radius: 50%;
-    padding: 15px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.play-icon {
+    width: 50%;
+    height: 50%;
 }
 
 .play-button:hover {
-  background: rgba(255, 255, 255, 1);
-  color: #fb6e14;
+    background: rgba(255, 255, 255, 1);
+    color: #fb6e14;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Tablet adjustments (min-width: 600px) */
+@media (min-width: 600px) {
+    .play-button {
+        width: 10vw;
+        height: 10vw;
+        max-width: 70px;
+        max-height: 70px;
+    }
+}
+
+/* Desktop adjustments (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .close-button {
