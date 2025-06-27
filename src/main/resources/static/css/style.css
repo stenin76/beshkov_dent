@@ -732,7 +732,7 @@ p {
 }
 
 #fh5co-events {
-
+  background-image: url(../images/rengen_base.jpg);
   background-color: transparent;
   background-size: cover;
   background-attachment: fixed;
@@ -777,7 +777,10 @@ p {
 
 @media screen and (max-width: 768px) {
   #fh5co-events {
-    padding: 2em 0;
+    background-image: url(../images/rengen-base-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 
