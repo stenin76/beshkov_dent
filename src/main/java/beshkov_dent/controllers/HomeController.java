@@ -50,8 +50,8 @@ public class HomeController {
         this.messageService.addMassage(messageAddDto);
 
         redirectAttributes
-                .addFlashAttribute("successful_message", messageAddDto);
+                .addFlashAttribute("successful_message", true);
 
-        return "redirect:/#reservation-form";
+        return "redirect:/#fh5co-contact successful_message";
     }
 }

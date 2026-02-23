@@ -219,6 +219,10 @@ $(function() {
 
 	Gallery.init();
 
+	$('#rg-gallery').on('click', 'a', function (e) {
+        e.preventDefault();
+    });
+
 	 setInterval(function() {
         	if (typeof Gallery !== 'undefined') {
 

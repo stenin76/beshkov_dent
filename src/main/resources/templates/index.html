@@ -32,12 +32,16 @@
     <link rel="stylesheet" href="/css/style-nav.css">
     <link rel="stylesheet" href="/css/gallery.css">
     <link rel="stylesheet" href="/css/elastislide.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
 <div class="js-sticky">
     <div class="fh5co-main-nav">
         <div class="gtco-nav">
+            <div>
+                <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            </div>
             <div class="fh5co-menu-2">
                 <a>
                     <img src="images/logo1.png" alt="">
@@ -50,15 +54,20 @@
                 <a href="#" data-nav-section="events">Ренген</a>
                 <a href="#" data-nav-section="menu">Галерия</a>
                 <a href="#" data-nav-section="reservation">Контакти</a>
-                <a href="#" data-nav-section="reservation">
+                <a href="#" data-nav-section="reservation1">
                     <p class="btn btn-primary btn-outline">За връзка</p>
                 </a>
             </div>
+            <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                <div class="coccoc-alo-ph-img-circle"></div>
+            </div>
         </div>
     </div>
+    <a id="button-up"></a>
 </div>
 
 <div id="fh5co-container">
+
     <div id="fh5co-home" class="js-fullheight" data-section="home">
         <div class="flexslider">
             <div class="fh5co-overlay"></div>
@@ -67,7 +76,7 @@
                     <div class="row">
                         <h1 class="to-animate">Дентална клиника</h1>
                         <h1 class="to-animate">"Бешков Дент"</h1>
-                        <h2 class="to-animate">Усмихни се с нас!</h2>
+                        <h2 class="to-animate">ГРИЖИМ СЕ ЗА ВАШАТА УСМИВКА!</h2>
                     </div>
                 </div>
             </div>
@@ -79,6 +88,7 @@
                 </li>
             </ul>
         </div>
+
     </div>
 
     <div id="fh5co-about" data-section="about" style="background-image: url(images/about-back.jpg)">
@@ -387,14 +397,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 to-animate-2">
+                <div class="col-md-6 to-animate">
                     <h3>Контакти</h3>
                     <ul class="fh5co-contact-info">
                         <li class="fh5co-contact-address">
-                            <i class="icon-home"></i>5555 гр. Пловдив, <br>ул. “Д-р Киро Добрев” №2, ет.1
+                            <i class="icon-home"></i>4000 гр. Пловдив, <br>Каменица2 Източен, бул. „Княгиня Мария Луиза“ 60
                         </li>
                         <li>
-                            <i class="icon-phone"></i> 0898605751; 0896377987
+                            <i class="icon-phone"></i> 0898 60 57 51; 0896 37 79 87
                         </li>
                         <li>
                             <i class="icon-clock"></i>Понеделник / Петък - 10:00–18:30<br>
@@ -402,19 +412,21 @@
                             Неделя - Почивен ден
                         </li>
                         <li>
-                            <i class="icon-envelope"></i>mail@mail.com
+                            <i class="icon-envelope"></i>perfection32@abv.bg
                         </li>
                         <li>
-                            <i class="icon-location-pin"></i>виж на картата
+                            <i class="icon-facebook"></i>
+                            <a href="https://www.facebook.com/Beshkovdent/" target="_blank">https://www.facebook.com/Beshkovdent/</a>
                         </li>
                         <li>
-                            <i class="icon-facebook"></i> <a href="https://www.facebook.com/Beshkovdent/" target="_blank">https://www.facebook.com/Beshkovdent/</a></li>
+                            <i class="icon-location-pin"></i>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1479.0787230451078!2d24.763426981005626!3d42.14691749288765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1cdacd2c5f7%3A0xe93ecf9f4517c3d1!2sBESHKOV%20DENT!5e0!3m2!1sbg!2sbg!4v1764231954031!5m2!1sbg!2sbg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </li>
                     </ul>
                 </div>
-
-                <div class="col-md-6 to-animate-2" id="reservation-form">
-
-                    <div th:if="${successful_message}">
+                <div class="col-md-6 to-animate-1" data-section="reservation1" id="fh5co-contact successful_message">
+                    <h3 id="reservation-form">Направете запитване</h3>
+                    <div th:if="${successful_message == true}">
                         <div class="custom-modal">
                             <div class="succes succes-animation icon-top"><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#5B627C"></rect><line x1="9.35355" y1="16.6464" x2="13.3536" y2="20.6464" stroke="#19191B"></line><line x1="23.3536" y1="11.3536" x2="13.3536" y2="21.3536" stroke="#19191B"></line></svg></div>
                             <div class="succes border-bottom"></div>
@@ -425,13 +437,12 @@
                         </div>
                     </div>
 
-                    <form th:action="@{/addMessage}"
+                    <form th:if="${successful_message != true}"
+                          th:action="@{/addMessage}"
                           th:method="post"
                           th:object="${messageAddDto}">
 
                         <div class="form-group">
-
-                        <h3>Направете запитване</h3>
                             <input type="text"
                                    class="form-control"
                                    placeholder="Име и Фамилия*"
@@ -471,7 +482,7 @@
                                th:errors="*{content}"
                                class="error-message alert alert-danger"></p>
                         </div>
-                            <div class="checkbox">
+                        <div class="checkbox">
                                 <label>
                                     <input type="checkbox"
                                            name="terms"
@@ -484,7 +495,7 @@
                                    th:errors="*{terms}"
                                    class="error-message alert alert-danger"></p>
                             </div>
-                            <div class="form-group">
+                        <div class="form-group">
                                 <input class="btn btn-primary btn-outline" value="Изпрати" type="submit">
                             </div>
                     </form>
@@ -492,6 +503,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 <div id="fh5co-footer">
@@ -532,6 +544,7 @@
 <script src="/js/jquery.elastislide.js"></script>
 <script src="/js/jquery.tmpl.min.js"></script>
 <script src="js/rengen-video-play.js"></script>
+
 
 <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
 			<div class="rg-image-wrapper">

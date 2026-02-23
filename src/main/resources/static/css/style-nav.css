@@ -5,13 +5,12 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
-  padding-top: 15px;
   width: 100%;
    z-index: 1001;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-  justify-content: center; /* horizontal centering */
+  justify-content: space-around;
   align-items: center;     /* vertical centering */
   backdrop-filter: blur(10px);
   border-radius: 15px;
@@ -21,7 +20,6 @@
 
 .fh5co-main-nav .fh5co-menu-1 {
   font-size: 14px;
-  letter-spacing: 2px;
   text-align: center;
   width: auto;
   text-transform: uppercase;
@@ -38,14 +36,6 @@
   *display: inline;
 }
 
-.fh5co-main-nav .fh5co-menu-2 a {
-   padding: 0px 80px 0px 0px;
-}
-
-.fh5co-main-nav .fh5co-menu-2 img {
-  padding: 0px 0px 10px 0px;
-}
-
 .fh5co-main-nav .fh5co-menu-1 a:hover, .fh5co-main-nav .fh5co-menu-1 a:focus, .fh5co-main-nav .fh5co-menu-1 a:active,
 .fh5co-main-nav .fh5co-menu-2 a:hover,
 .fh5co-main-nav .fh5co-menu-2 a:focus,
@@ -57,15 +47,20 @@
   text-decoration: none;
 }
 
+.fh5co-main-nav .fh5co-menu-1 a:hover {
+  color: #FF9800;
+}
+
 .fh5co-main-nav .fh5co-menu-1 a.active,
 .fh5co-main-nav .fh5co-menu-2 a.active,
 .fh5co-main-nav .fh5co-logo a.active {
-  color: #fb6e14;
+  color: #FF9800;
 }
 
 @media screen and (max-width: 768px) {
   .gtco-nav {
-    padding: 20px 0;
+    padding: 0px 8px;
+    justify-content: space-between;
   }
 }
 
@@ -97,27 +92,39 @@
   }
 }
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* scroll to top button */
+#button-up {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
 }
-.gtco-contact-info ul li.address:before {
-  font-size: 30px;
-  content: "\e9d1";
+#button-up::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
 }
-.gtco-contact-info ul li.phone:before {
-  font-size: 23px;
-  content: "\e9f4";
-}
-.gtco-contact-info ul li.email:before {
-  font-size: 23px;
-  content: "\e9da";
-}
-.gtco-contact-info ul li.url:before {
-  font-size: 23px;
-  content: "\e9af";
+#button-up:hover {
+  cursor: pointer;
+  background-color: #FF9800;
+  text-decoration: none;
 }
 
-form label {
-  font-weight: normal !important;
+#button-up.show {
+  opacity: 1;
+  visibility: visible;
 }

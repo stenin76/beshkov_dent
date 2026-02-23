@@ -1,13 +1,14 @@
 package beshkov_dent.model.dto;
 
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.NotBlank;
+
 
 public class UserLoginDto {
 
-    @Size(min = 3, max = 20, message = "Username length must be between 3 and 20 characters!")
+    @NotBlank
     private String username;
 
-    @Size(min = 3, max = 20, message = "Password length must be between 3 and 20 characters!")
+    @NotBlank
     private String password;
 
     public UserLoginDto() {}

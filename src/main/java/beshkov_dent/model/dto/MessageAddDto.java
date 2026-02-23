@@ -7,20 +7,20 @@ import jakarta.validation.constraints.Size;
 
 public class MessageAddDto {
 
-    @NotBlank(message = "Полето е задължително!")
+    @NotBlank(message = "Моля, попълнете това поле.")
     private String fullName;
 
-    @NotBlank(message = "Полето е задължително!")
+    @NotBlank(message = "Моля, попълнете това поле.")
     private String number;
 
     @Email(message = "Невалиден E-mail")
     private String email;
 
-    @NotBlank(message = "Полето е задължително!")
+    @NotBlank(message = "Моля, попълнете това поле.")
     @Size(max = 500, message = "Максималната дължина на полето е 500 символа!")
     private String content;
 
-    @AssertTrue(message = "Моля потвърдете ,че сте се запознали с условията за ползване!")
+    @AssertTrue(message = "Моля потвърдете ,че сте се запознали с условията за ползване.")
     private boolean terms;
 
 

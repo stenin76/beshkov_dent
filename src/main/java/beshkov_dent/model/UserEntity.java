@@ -1,6 +1,5 @@
 package beshkov_dent.model;
 
-
 import jakarta.persistence.*;
 
 @Entity

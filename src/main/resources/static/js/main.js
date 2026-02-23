@@ -1,15 +1,15 @@
 ;(function () {
-	
+
 	'use strict';
 
-	// iPad and iPod detection	
+	// iPad and iPod detection
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);
 	};
 
 	var isiPhone = function(){
 	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
+			(navigator.platform.indexOf("iPhone") != -1) ||
 			(navigator.platform.indexOf("iPod") != -1)
 	    );
 	};
@@ -53,9 +53,7 @@
 	var offcanvasMenu = function() {
 		$('body').prepend('<div id="fh5co-offcanvas" />');
 
-		$('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>');
-
-		$('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function(){
+		$('.fh5co-main-nav .fh5co-menu-1 a').each(function(){
 
 			var $this = $(this);
 
@@ -223,27 +221,27 @@
 
 	// Animations
 	var homeAnimate = function() {
-		if ( $('#fh5co-home').length > 0 ) {	
+		if ( $('#fh5co-home').length > 0 ) {
 
 			$('#fh5co-home').waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
 
 					setTimeout(function() {
 						$('#fh5co-home .to-animate').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
-					
+
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 
@@ -252,39 +250,39 @@
 
 	var aboutAnimate = function() {
 		var about = $('#fh5co-about');
-		if ( about.length > 0 ) {	
+		if ( about.length > 0 ) {
 
 			about.waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
 
 					setTimeout(function() {
 						about.find('.to-animate').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
 					setTimeout(function() {
 						about.find('.to-animate-2').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeIn animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
-					
+
 
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 
@@ -322,38 +320,38 @@
 
 	var featureAnimate = function() {
 		var feature = $('#fh5co-featured');
-		if ( feature.length > 0 ) {	
+		if ( feature.length > 0 ) {
 
 			feature.waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
 
 					setTimeout(function() {
 						feature.find('.to-animate').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
 					setTimeout(function() {
 						feature.find('.to-animate-2').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('bounceIn animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 500);
 
 
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 
@@ -362,26 +360,26 @@
 
 	var typeAnimate = function() {
 		var type = $('#fh5co-type');
-		if ( type.length > 0 ) {	
+		if ( type.length > 0 ) {
 
 			type.waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
 
 					setTimeout(function() {
 						type.find('.to-animate').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 
@@ -390,37 +388,37 @@
 
 	var menusAnimate = function() {
 		var menus = $('#fh5co-menus');
-		if ( menus.length > 0 ) {	
+		if ( menus.length > 0 ) {
 
 			menus.waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
 
 					setTimeout(function() {
 						menus.find('.to-animate').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
 					setTimeout(function() {
 						menus.find('.to-animate-2').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeIn animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 500);
 
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 
@@ -430,37 +428,37 @@
 
 	var eventsAnimate = function() {
 		var events = $('#fh5co-events');
-		if ( events.length > 0 ) {	
+		if ( events.length > 0 ) {
 
 			events.waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
 
 					setTimeout(function() {
 						events.find('.to-animate').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeIn animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
 					setTimeout(function() {
 						events.find('.to-animate-2').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 500);
 
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 
@@ -556,10 +554,42 @@
     		});
     	};
 
+// go to top button
+  document.addEventListener("DOMContentLoaded", function () {
+      const scrollBtn = document.querySelector(".sp-scroll-up");
+
+      window.addEventListener("scroll", function () {
+          if (window.scrollY > 100) {
+              scrollBtn.classList.add("show");
+          } else {
+              scrollBtn.classList.remove("show");
+          }
+      });
+
+      scrollBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          });
+      });
+  });
 
 
+var btn = $('#button-up');
 
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
 
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
 	// Document on load.
 	$(function(){
 
