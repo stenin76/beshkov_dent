@@ -190,10 +190,14 @@
 	// Reflect scrolling in navigation
 	var navActive = function(section) {
 
-		$('.fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]').removeClass('active');
-		$('.fh5co-main-nav, #fh5co-offcanvas').find('a[data-nav-section="'+section+'"]').addClass('active');
+      $('.fh5co-main-nav [data-nav-section], #fh5co-offcanvas [data-nav-section]')
+        .removeClass('active');
 
-	};
+      $('.fh5co-main-nav, #fh5co-offcanvas')
+        .find('[data-nav-section="'+section+'"]')
+        .addClass('active');
+
+    };
 
 	var navigationSection = function() {
 

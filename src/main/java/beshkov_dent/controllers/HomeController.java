@@ -52,6 +52,6 @@ public class HomeController {
         redirectAttributes
                 .addFlashAttribute("successful_message", true);
 
-        return "redirect:/#fh5co-contact successful_message";
+        return "redirect:/#fh5co-contact-successful-message";
     }
 }
