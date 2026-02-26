@@ -144,7 +144,7 @@ p {
   padding: 50px;
   font-family: "Merriweather", serif;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: 2px;
   color: #FF9800;
   -webkit-transition: 0.3s;
@@ -1716,67 +1716,70 @@ p {
 }
 
 /* phone button */
-.coccoc-alo-phone {
-    background-color: transparent;
-    cursor: pointer;
-    z-index: 200000 !important;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    -webkit-transition: visibility .5s;
-    -moz-transition: visibility .5s;
-    -o-transition: visibility .5s;
-    transition: visibility .5s;
-    right: 150px;
-    top: 30px;
-}
+@media screen and (max-width: 768px) {
+  .coccoc-alo-phone {
+      background-color: transparent;
+      cursor: pointer;
+      z-index: 200000 !important;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translateZ(0);
+      -webkit-transition: visibility .5s;
+      -moz-transition: visibility .5s;
+      -o-transition: visibility .5s;
+      transition: visibility .5s;
+      right: 150px;
+      top: 30px;
+  }
 
-.coccoc-alo-phone.coccoc-alo-green .coccoc-alo-ph-circle-fill {
-    background-color: rgba(0, 175, 242, 0.5);
-    opacity: .75 !important;
-}
+  .coccoc-alo-phone.coccoc-alo-green .coccoc-alo-ph-circle-fill {
+      background-color: rgba(0, 175, 242, 0.5);
+      opacity: .75 !important;
+  }
 
-.coccoc-alo-ph-circle-fill {
-    width: 100px;
-    height: 100px;
-    top: 50px;
-    left: 50px;
-    position: absolute;
-    background-color: #000;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    border: 2px solid transparent;
-    opacity: .1;
-    -webkit-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
-    -moz-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
-    -ms-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
-    -o-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
-    animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-}
+  .coccoc-alo-ph-circle-fill {
+      width: 100px;
+      height: 100px;
+      top: 50px;
+      left: 50px;
+      position: absolute;
+      background-color: #000;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      border: 2px solid transparent;
+      opacity: .1;
+      -webkit-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+      -moz-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+      -ms-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+      -o-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+      animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+  }
 
-.coccoc-alo-ph-img-circle {
-    width: 50px;
-    height: 50px;
-    background: rgba(30, 30, 30, 0.1) url(../images/phone.png) no-repeat center center;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    border: 2px solid transparent;
-    -webkit-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
-    -moz-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
-    -ms-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
-    -o-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
-    animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
-    background-color: rgba(0, 0, 0, 0.7);
-}
+  .coccoc-alo-ph-img-circle {
+      width: 50px;
+      height: 50px;
+      background: rgba(30, 30, 30, 0.1) url(../images/phone.png) no-repeat center center;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      border: 2px solid transparent;
+      -webkit-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+      -moz-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+      -ms-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+      -o-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+      animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+      background-color: rgba(0, 0, 0, 0.7);
+  }
 
-.coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-img-circle,
-.coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-img-circle {
-    background-color: #FF9800;
+  .coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-img-circle,
+  .coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-img-circle {
+      background-color: #FF9800;
+  }
+
 }
 
 @keyframes coccoc-alo-circle-img-anim {
