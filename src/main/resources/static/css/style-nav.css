@@ -33,7 +33,7 @@
   padding-bottom: 5px;
 }
 
-.fh5co-menu-1 a::after {
+.fh5co-menu-1 a:not(.no-underline)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -46,7 +46,7 @@
   transition: transform 0.3s ease;
 }
 
-.fh5co-menu-1 a:hover::after {
+.fh5co-menu-1 a:not(.no-underline):hover::after {
   transform: scaleX(1);      /* animate to full width */
 }
 

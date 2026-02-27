@@ -66,6 +66,17 @@ p {
   border: 2px solid #FF9800;
 }
 
+.btn.btn-primary.btn-outline.no-underline {
+  background: transparent;
+  border: 2px solid #FF9800;
+  padding: 5px 10px;
+}
+
+.btn.btn-primary.btn-outline.no-underline:hover, .btn.btn-primary.btn-outline.no-underline:focus, .btn.btn-primary.btn-outline.no-underline:active {
+  background: #fb6e14;
+  color: #fff;
+}
+
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
   background: #fb6e14;
   color: #fff;
@@ -998,13 +1009,22 @@ p {
   display: block;
   color: rgba(255, 255, 255, 0.4);
   text-align: center;
-  padding: 7px 0;
+  padding: 10px 0;
 }
 
 #fh5co-offcanvas a:hover, #fh5co-offcanvas a:focus, #fh5co-offcanvas a:active {
   outline: none;
   text-decoration: none;
   color: #FF9800;
+}
+
+#fh5co-offcanvas .btn.btn-primary.btn-outline.no-underline:hover {
+  background: #fb6e14;
+  color: #fff;
+}
+
+#fh5co-offcanvas .btn.btn-primary.btn-outline.no-underline {
+  margin: 10px;
 }
 
 #fh5co-offcanvas a.active {
