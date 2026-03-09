@@ -1352,12 +1352,6 @@ p {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
- .modalContent {
-    margin-top: 1px;
- }
-}
-
 .modalContent section {
   padding: 2em;
   border-radius: 8px;
