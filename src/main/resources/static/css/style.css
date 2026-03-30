@@ -7,7 +7,7 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 300;
   color: #5e493a;
 }
@@ -194,7 +194,7 @@ p {
 
 
 .fh5co-heading .heading {
-  font-size: 50px;
+  font-size: 32px;
   font-style: italic;
   position: relative;
   padding-bottom: 30px;
@@ -222,7 +222,7 @@ p {
 }
 
 .fh5co-heading .sub-heading {
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.5;
   margin-bottom: 30px;
 }
@@ -299,8 +299,11 @@ p {
 }
 
 #fh5co-about .fh5co-text p {
-  line-height: 2;
-
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid #FF9800;
+  margin-left: 10em;
+  margin-right: 10em;
 }
 
 @media screen and (max-width: 1200px) {
