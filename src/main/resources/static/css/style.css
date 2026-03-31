@@ -298,12 +298,24 @@ p {
   margin-left: -20px;
 }
 
-#fh5co-about .fh5co-text p {
+#fh5co-about .to-animate-us {
   border-radius: 20px;
   padding: 25px;
   border: 1px solid #FF9800;
   margin-left: 10em;
   margin-right: 10em;
+  backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 768px) {
+  #fh5co-about .to-animate-us {
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #FF9800;
+    margin-left: 0em;
+    margin-right: 0em;
+    backdrop-filter: blur(10px);
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -843,8 +855,8 @@ p {
 }
 
 #fh5co-events .fh5co-event p {
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.5;
   color: #a99c92;
 }
 
@@ -871,11 +883,6 @@ p {
    background-size: cover;
    background-position: inherit;
   }
-}
-
-#fh5co-contact h3 {
-  margin-bottom: 30px;
-  font-style: italic;
 }
 
 #fh5co-contact .fh5co-heading .heading {
@@ -907,6 +914,19 @@ p {
 #fh5co-contact .fh5co-contact-info {
   padding: 0;
   margin: 0 0 1.5em 0;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid #FF9800;
+  backdrop-filter: blur(10px);
+}
+
+#fh5co-contact .fh5co-contact-info-1 {
+  padding: 0;
+  margin: 0 0 1.5em 0;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid #FF9800;
+  backdrop-filter: blur(10px);
 }
 
 #fh5co-contact .fh5co-contact-info li {

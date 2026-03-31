@@ -89,12 +89,14 @@
     </div>
 
     <div id="fh5co-about" data-section="about" style="background-image: url(images/about-back.jpg)">
-        <div class="fh5co-2col fh5co-text" >
+        <div class="fh5co-2col fh5co-text">
             <h2 class="heading to-animate">За нас</h2>
-            <p class="to-animate">Дентална клиника „Бешков Дент” повече от 10 години създава Вашите усмивки. Ние сме екип от млади, креативни и амбициозни специалисти, обичащи предизвикателствата. Работим с висококачествена техника и най-новите материали, предлагани на пазара. Непрекъснато се стремим да повишаваме квалификацията си, посещавайки различни курсове и обучения. Основната ни цел е да предложим професионално и качествено лечение на достъпни цени.</p>
-            <p>Подходът ни към всеки пациент е индивидуален. Стремим се да създадем приятна атмосфера и да извършваме безболезнени манипулации, по този начин опровергаваме остарелите разбирания, че зъболекарят винаги е свързан с отрицателни емоции. Нашето мото е: „Няма по-доволен пациент от усмихнатия”.</p>
-            <p>Клиниката е разположена на площ от 200 кв. м. в централната част на града. Тя разполага с няколко стоматологични и един рентгенов кабинет, оборудвани с модерна апаратура (3D дентален рентген, интраорален 3D скенер и дентален лазер) и предлага висококачествено дентално лечение на достъпни цени в уютна и комфортна обстановка с контролиран достъп.</p>
-        </div>
+            <div class="to-animate-us">
+                <p>Дентална клиника „Бешков Дент” повече от 10 години създава Вашите усмивки. Ние сме екип от млади, креативни и амбициозни специалисти, обичащи предизвикателствата. Работим с висококачествена техника и най-новите материали, предлагани на пазара. Непрекъснато се стремим да повишаваме квалификацията си, посещавайки различни курсове и обучения. Основната ни цел е да предложим професионално и качествено лечение на достъпни цени.</p>
+                <p>Подходът ни към всеки пациент е индивидуален. Стремим се да създадем приятна атмосфера и да извършваме безболезнени манипулации, по този начин опровергаваме остарелите разбирания, че зъболекарят винаги е свързан с отрицателни емоции. Нашето мото е: „Няма по-доволен пациент от усмихнатия”.</p>
+                <p>Клиниката е разположена на площ от 200 кв. м. в централната част на града. Тя разполага с няколко стоматологични и един рентгенов кабинет, оборудвани с модерна апаратура (3D дентален рентген, интраорален 3D скенер и дентален лазер) и предлага висококачествено дентално лечение на достъпни цени в уютна и комфортна обстановка с контролиран достъп.</p>
+            </div>
+          </div>
         <div class="fh5co-2col fh5co-bg to-animate-2">
             <section class="gallery-3D">
                 <div class="gallery">
@@ -455,53 +457,53 @@
                             </div>
                         </div>
                     </div>
+                    <div class="fh5co-contact-info-1">
+                        <form th:if="${successful_message != true}"
+                              th:action="@{/addMessage}"
+                              th:method="post"
+                              th:object="${messageAddDto}">
 
-                    <form th:if="${successful_message != true}"
-                          th:action="@{/addMessage}"
-                          th:method="post"
-                          th:object="${messageAddDto}">
-
-                        <div class="form-group">
-                            <input type="text"
-                                   class="form-control"
-                                   placeholder="Име и Фамилия*"
-                                   id="fullName" name="fullName"
-                                   th:field="*{fullName}"/>
-                            <p th:if="${#fields.hasErrors('fullName')}"
-                               th:errors="*{fullName}"
-                               class="error-message alert alert-danger"></p>
-                        </div>
-                        <div class="form-group ">
-                            <input type="text"
-                                   class="form-control"
-                                   placeholder="Телефон*"
-                                   id="number" name="number"
-                                   th:field="*{number}"/>
-                            <p th:if="${#fields.hasErrors('number')}"
-                               th:errors="*{number}"
-                               class="error-message alert alert-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input type="text"
-                                   class="form-control"
-                                   placeholder="Email адрес"
-                                   id="email" name="email"
-                                   th:field="*{email}"/>
-                            <p th:if="${#fields.hasErrors('email')}"
-                               th:errors="*{email}"
-                               class="error-message alert alert-danger"></p>
-                        </div>
-                        <div class="form-group">
+                            <div class="form-group">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Име и Фамилия*"
+                                       id="fullName" name="fullName"
+                                       th:field="*{fullName}"/>
+                                <p th:if="${#fields.hasErrors('fullName')}"
+                                   th:errors="*{fullName}"
+                                   class="error-message alert alert-danger"></p>
+                            </div>
+                            <div class="form-group ">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Телефон*"
+                                       id="number" name="number"
+                                       th:field="*{number}"/>
+                                <p th:if="${#fields.hasErrors('number')}"
+                                   th:errors="*{number}"
+                                   class="error-message alert alert-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Email адрес"
+                                       id="email" name="email"
+                                       th:field="*{email}"/>
+                                <p th:if="${#fields.hasErrors('email')}"
+                                   th:errors="*{email}"
+                                   class="error-message alert alert-danger"></p>
+                            </div>
+                            <div class="form-group">
                             <textarea class="form-control"
                                       placeholder="Съобщение*"
                                       id="content" cols="30" rows="5"  name="content"
                                       th:field="*{content}">
                             </textarea>
-                            <p th:if="${#fields.hasErrors('content')}"
-                               th:errors="*{content}"
-                               class="error-message alert alert-danger"></p>
-                        </div>
-                        <div class="checkbox">
+                                <p th:if="${#fields.hasErrors('content')}"
+                                   th:errors="*{content}"
+                                   class="error-message alert alert-danger"></p>
+                            </div>
+                            <div class="checkbox">
                                 <label>
                                     <input type="checkbox"
                                            name="terms"
@@ -514,10 +516,12 @@
                                    th:errors="*{terms}"
                                    class="error-message alert alert-danger"></p>
                             </div>
-                        <div class="form-group">
+                            <div class="form-group">
                                 <input class="btn btn-primary btn-outline" value="Изпрати" type="submit">
                             </div>
-                    </form>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>

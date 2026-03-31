@@ -21,11 +21,6 @@ public class HomeController {
     }
 
 
-    @ModelAttribute("messageAddDto")
-    public MessageAddDto iniProductAddDto() {
-        return new MessageAddDto();
-    }
-
     @GetMapping("/")
     public String showHome(Model model) {
 
@@ -36,9 +31,9 @@ public class HomeController {
     }
 
     @PostMapping("/addMessage")
-    public String massageAdd(@Valid MessageAddDto messageAddDto,
-                           BindingResult bindingResult,
-                           RedirectAttributes redirectAttributes) {
+    public String massageAdd(@Valid @ModelAttribute("messageAddDto") MessageAddDto messageAddDto,
+                             BindingResult bindingResult,
+                             RedirectAttributes redirectAttributes) {
 
         if (bindingResult.hasErrors()) {
             redirectAttributes
