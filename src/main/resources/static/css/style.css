@@ -133,7 +133,7 @@ p {
 #fh5co-home .flexslider .fh5co-text h1 {
   margin: 0;
   padding: 0;
-  font-size: clamp(2.2rem, 6vw, 5rem);
+  font-size: clamp(8rem, 6vw, 5rem);
   font-weight: 500;
   font-style: italic;
   color: #fff;
@@ -144,7 +144,7 @@ p {
 
 @media screen and (max-width: 992px) {
   #fh5co-home .flexslider .fh5co-text h1 {
-    font-size: 40px;
+    font-size: 45px;
   }
 }
 
@@ -153,7 +153,7 @@ p {
   padding: 50px;
   font-family: "Merriweather", serif;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 22px;
   letter-spacing: 2px;
   color: #FF9800;
   -webkit-transition: 0.3s;
@@ -163,7 +163,7 @@ p {
 
 @media screen and (max-width: 992px) {
   #fh5co-home .flexslider .fh5co-text h2 {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 #fh5co-home .flexslider .fh5co-text h2 span {
@@ -942,6 +942,11 @@ p {
   top: .4em;
   left: 0;
 }
+
+.row h3 {
+    text-align: center;
+}
+
 
 #fh5co-container {
   position: relative;
